@@ -1,0 +1,71 @@
+﻿@model vmPatient
+@{
+    Layout = "~/Views/Shared/MenuLayout.cshtml";
+}
+<form method="post">
+
+<div class="row">
+    <div class="col-8">
+<div class="ms-2 mb-3">
+  <label class="form-label">Name</label>
+  <input type="text" class="form-control" asp-for="Patient.Name" placeholder="Patient Name">
+</div>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-8">
+<div class="ms-2 mb-3">
+  <label class="form-label">Birth date</label>
+  <input type="date" class="form-control" asp-for="Patient.BDate" placeholder="Patient BirthDate">
+</div>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-8">
+        <div class="ms-2 mb-3">
+            <label class="form-label">Phone</label>
+            <input type="text" class="form-control" asp-for="Patient.Phone" placeholder="Patient Mobile No">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-8">
+        <div class="ms-2 mb-3">
+            <label class="form-label">Gender</label>
+            
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" asp-for="Patient.Gender"  value="male">
+                <label class="form-check-label" >Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" asp-for="Patient.Gender" value="female">
+                <label class="form-check-label" >Female</label>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-8">
+        <div class="ms-2 mb-3">
+            <label class="form-label">Country</label>
+            <select class="form-select" asp-for="Patient.Country_Id" asp-items='new SelectList(Model.countries,"Id","Name")' aria-label="Default select example">
+                <option selected>Select Country</option>
+
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-8">
+        <div class="ms-2 mb3">
+            <input type="submit" value="Save" class="btn btn-primary" asp-action="Save" />
+        </div>
+    </div>
+</div>
+</form>
