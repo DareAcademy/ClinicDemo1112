@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\inetpub\wwwroot\ClinicDemo1112\ClinicDemo1112
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/inetpub/wwwroot/ClinicDemo1112/ClinicDemo1112/Views/Country/CountryList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxDb3VudHJ5TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/inetpub/wwwroot/ClinicDemo1112/ClinicDemo1112/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -26,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/inetpub/wwwroot/ClinicDemo1112/ClinicDemo1112/Views/Patient/NewPatient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxOZXdQYXRpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/inetpub/wwwroot/ClinicDemo1112/ClinicDemo1112/Views/Patient/PatientList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxQYXRpZW50TGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/inetpub/wwwroot/ClinicDemo1112/ClinicDemo1112/Views/Shared/Error.cshtml]

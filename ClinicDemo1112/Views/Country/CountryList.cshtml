@@ -1,0 +1,28 @@
+﻿@model List<CountryDTO>
+@{
+    ViewData["Title"] = "CountryList";
+    Layout = "~/Views/Shared/MenuLayout.cshtml";
+}
+
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (CountryDTO item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+                <td>
+                    @item.Name
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

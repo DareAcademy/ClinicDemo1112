@@ -1,0 +1,59 @@
+﻿@model List<PatientDTO>
+
+@{
+    ViewData["Title"] = "PatientList";
+    Layout = "~/Views/Shared/MenuLayout.cshtml";
+}
+
+<form method="post">
+
+    <div class="row ms-2 mt-3">
+        <div class="col-2">
+            <label class="form-label">Patient Name</label>
+        </div>
+        <div class="col-6">
+            <input type="text" class="form-control" name="txtSearchPatientName" />
+        </div>
+        <div class="col-2">
+            <input type="submit" class="btn btn-primary" value="Search"  asp-action="SearchPatient" />
+        </div>
+    </div>
+    <div class="row ms-2 mt-3">
+        <div class="col-9">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Phone
+                        </th>
+                        <th>
+                            Country
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (PatientDTO item in Model)
+                    {
+                    <tr>
+                        <td>
+                            @item.Name
+                        </td>
+                        <td>
+                            @item.Phone
+                        </td>
+                        <td>
+                            @item.Country_Id
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</form>
+
