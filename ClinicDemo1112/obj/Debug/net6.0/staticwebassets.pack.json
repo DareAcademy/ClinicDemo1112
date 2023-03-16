@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\ClinicDemo1112.bundle.scp.css"
     },
     {
+      "Id": "C:\\inetpub\\wwwroot\\ClinicDemo1112\\ClinicDemo1112\\wwwroot\\1edb0e57-dc93-4242-a7e5-572183883243.jpg",
+      "PackagePath": "staticwebassets\\1edb0e57-dc93-4242-a7e5-572183883243.jpg"
+    },
+    {
       "Id": "C:\\inetpub\\wwwroot\\ClinicDemo1112\\ClinicDemo1112\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -243,6 +247,10 @@
     {
       "Id": "C:\\inetpub\\wwwroot\\ClinicDemo1112\\ClinicDemo1112\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\inetpub\\wwwroot\\ClinicDemo1112\\ClinicDemo1112\\wwwroot\\logo.png",
+      "PackagePath": "staticwebassets\\logo.png"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ClinicDemo1112.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -2,13 +2,23 @@
 @{
     Layout = "~/Views/Shared/MenuLayout.cshtml";
 }
-<form method="post">
+<form method="post" enctype="multipart/form-data">
+    @*<div class="row">
+        <div class="col-8">
+            <div class="ms-2 mb-3">
+                <label class="form-label">ID</label>
+                <input type="text" class="form-control" asp-for="Patient.Id" readonly >
+            </div>
+        </div>
+    </div>*@
+    <input type="hidden" asp-for="Patient.Id">
 
 <div class="row">
     <div class="col-8">
 <div class="ms-2 mb-3">
   <label class="form-label">Name</label>
   <input type="text" class="form-control" asp-for="Patient.Name" placeholder="Patient Name">
+  <span asp-validation-for="Patient.Name"></span>
 </div>
 </div>
 </div>
@@ -18,6 +28,7 @@
 <div class="ms-2 mb-3">
   <label class="form-label">Birth date</label>
   <input type="date" class="form-control" asp-for="Patient.BDate" placeholder="Patient BirthDate">
+                <span asp-validation-for="Patient.BDate"></span>
 </div>
 </div>
 </div>
@@ -27,6 +38,7 @@
         <div class="ms-2 mb-3">
             <label class="form-label">Phone</label>
             <input type="text" class="form-control" asp-for="Patient.Phone" placeholder="Patient Mobile No">
+                <span asp-validation-for="Patient.Phone"></span>
         </div>
     </div>
 </div>
@@ -57,14 +69,31 @@
                 <option selected>Select Country</option>
 
             </select>
+                <span asp-validation-for="Patient.Country_Id"></span>
         </div>
     </div>
 </div>
 
+    <div class="row">
+        <div class="col-8">
+            <div class="ms-2 mb-3">
+                <label class="form-label">Profile</label>
+                <input type="file" asp-for="Patient.ProfileImage" />
+            </div>
+        </div>
+    </div>
+
 <div class="row">
     <div class="col-8">
         <div class="ms-2 mb3">
+                @if ((bool)ViewData["IsEdit"]==false)
+                {
             <input type="submit" value="Save" class="btn btn-primary" asp-action="Save" />
+                }
+                else
+                {
+                <input type="submit" value="Update" class="btn btn-primary" asp-action="Update" />
+                }
         </div>
     </div>
 </div>

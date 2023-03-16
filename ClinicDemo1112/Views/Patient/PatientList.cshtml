@@ -24,6 +24,9 @@
                 <thead>
                     <tr>
                         <th>
+                            Image
+                        </th>
+                        <th>
                             Name
                         </th>
                         <th>
@@ -32,6 +35,9 @@
                         <th>
                             Country
                         </th>
+                        <th>
+                            Action
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,13 +45,20 @@
                     {
                     <tr>
                         <td>
+                                <img src="~/UploadImg/@item.ProfilePath" style="width:50px">
+                        </td>
+                        <td>
                             @item.Name
                         </td>
                         <td>
                             @item.Phone
                         </td>
                         <td>
-                            @item.Country_Id
+                            @item.countryDTO.Name
+                        </td>
+                        <td>
+                                <a asp-action="DeletePatient" asp-route-Id="@item.Id">Delete</a>
+                                <a asp-action="EditPatient" asp-route-Id="@item.Id">Edit</a>
                         </td>
                     </tr>
                     }

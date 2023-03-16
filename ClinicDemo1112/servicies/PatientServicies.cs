@@ -1,15 +1,18 @@
 ﻿using ClinicDemo1112.data;
 using ClinicDemo1112.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ClinicDemo1112.servicies
 {
-    public class PatientServicies
+    public class PatientServicies:IPatientService
     {
         ClinicContext context;
-
-        public PatientServicies()
+        ICountryService countryService;
+        public PatientServicies(ClinicContext _context,ICountryService _countryService)
         {
-            context = new ClinicContext();
+            //context = new ClinicContext();
+            context = _context;
+            countryService = _countryService;
         }
 
         public void Insert(PatientDTO patientDTO)
@@ -22,9 +25,28 @@ namespace ClinicDemo1112.servicies
             patient.BDate = patientDTO.BDate;
             patient.Country_Id = patientDTO.Country_Id;
             patient.Gender = patientDTO.Gender;
-
+            patient.Path =patientDTO.ProfilePath;
             context.Patients.Add(patient);
             context.SaveChanges();
+        }
+
+        public void Update(PatientDTO patientDTO)
+        {
+            //context = new ClinicContext();
+            Patient patient;
+            patient = new Patient();
+            patient.Id = patientDTO.Id;
+            patient.Name = patientDTO.Name;
+            patient.Phone = patientDTO.Phone;
+            patient.BDate = patientDTO.BDate;
+            patient.Country_Id = patientDTO.Country_Id;
+            patient.Gender = patientDTO.Gender;
+            patient.Path = patientDTO.ProfilePath;
+
+            context.Patients.Attach(patient);
+            context.Entry(patient).State = EntityState.Modified;
+            context.SaveChanges();
+
         }
 
 
@@ -38,6 +60,7 @@ namespace ClinicDemo1112.servicies
             //                           select pat).ToList();
 
 
+            //List<Patient> liPatient = context.Patients.Include("country").Where(p => p.Name == name).ToList();
             List<Patient> liPatient = context.Patients.Where(p => p.Name == name).ToList();
 
             //List<PatientDTO> patients = new List<PatientDTO>();
@@ -65,12 +88,45 @@ namespace ClinicDemo1112.servicies
                     Phone = item.Phone,
                     Gender = item.Gender,
                     BDate = item.BDate,
-                    Country_Id = item.Country_Id
+                    Country_Id = item.Country_Id,
+                    ProfilePath=item.Path,
+                    countryDTO=countryService.Load(item.Country_Id)
+                    //countryDTO=new CountryDTO()
+                    //{
+                    //    Id=item.country.Id,
+                    //    Name=item.country.Name
+                    //}
+
+
                 });
             }
 
             return patients;
 
         }
+
+        public void Delete(int Id)
+        {
+            Patient patient = context.Patients.Find(Id);
+            context.Patients.Remove(patient);
+            context.SaveChanges();
+        }
+
+        public PatientDTO Load(int Id)
+        {
+            Patient patient = context.Patients.Find(Id);
+            PatientDTO patientDTO = new PatientDTO()
+            {
+                Id = patient.Id,
+                Name=patient.Name,
+                BDate=patient.BDate,
+                Country_Id=patient.Country_Id,
+                Gender=patient.Gender,
+                Phone=patient.Phone,
+                ProfilePath=patient.Path
+            };
+
+            return patientDTO;
+        }   
     }
 }

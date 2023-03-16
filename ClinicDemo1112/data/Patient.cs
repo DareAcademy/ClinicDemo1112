@@ -19,5 +19,7 @@ namespace ClinicDemo1112.data
         public int Country_Id { get; set; }
 
         public Country country { get; set; }
+
+        public string Path { get; set; }
     }
 }

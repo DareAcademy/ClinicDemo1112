@@ -7,6 +7,16 @@ namespace ClinicDemo1112.Controllers
 {
     public class CountryController : Controller
     {
+        //CountryServicies countryService;
+
+        ICountryService countryService;
+        public CountryController(ICountryService _countryService)
+        {
+            //countryService = new CountryServicies();
+            countryService = _countryService;
+
+        }
+
         public IActionResult Index()
         {
             //ClinicContext context = new ClinicContext();
@@ -27,7 +37,7 @@ namespace ClinicDemo1112.Controllers
             //    countries.Add(countryDTO);
             //}
 
-            CountryServicies countryService = new CountryServicies();
+            //CountryServicies countryService = new CountryServicies();
             List<CountryDTO> countries= countryService.LoadAll();
 
             return View("CountryList", countries);

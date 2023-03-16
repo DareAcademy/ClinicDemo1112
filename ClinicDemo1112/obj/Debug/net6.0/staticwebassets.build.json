@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WNuk5HOHH9s+NWhl/ddwAwcXrC3WrAmOIpBNHOQBmM8=",
+  "Hash": "xtDmv0mmBZRvAhd/YgMGl9Axr0W5SsbmTNp+JzW7d08=",
   "Source": "ClinicDemo1112",
   "BasePath": "_content/ClinicDemo1112",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\inetpub\\wwwroot\\ClinicDemo1112\\ClinicDemo1112\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ClinicDemo1112.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\inetpub\\wwwroot\\ClinicDemo1112\\ClinicDemo1112\\wwwroot\\1edb0e57-dc93-4242-a7e5-572183883243.jpg",
+      "SourceId": "ClinicDemo1112",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\inetpub\\wwwroot\\ClinicDemo1112\\ClinicDemo1112\\wwwroot\\",
+      "BasePath": "_content/ClinicDemo1112",
+      "RelativePath": "1edb0e57-dc93-4242-a7e5-572183883243.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\1edb0e57-dc93-4242-a7e5-572183883243.jpg"
     },
     {
       "Identity": "C:\\inetpub\\wwwroot\\ClinicDemo1112\\ClinicDemo1112\\wwwroot\\css\\site.css",
@@ -1069,6 +1086,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\inetpub\\wwwroot\\ClinicDemo1112\\ClinicDemo1112\\wwwroot\\logo.png",
+      "SourceId": "ClinicDemo1112",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\inetpub\\wwwroot\\ClinicDemo1112\\ClinicDemo1112\\wwwroot\\",
+      "BasePath": "_content/ClinicDemo1112",
+      "RelativePath": "logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\logo.png"
     }
   ]
 }

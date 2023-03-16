@@ -3,12 +3,12 @@ using ClinicDemo1112.Models;
 
 namespace ClinicDemo1112.servicies
 {
-    public class CountryServicies
+    public class CountryServicies:ICountryService
     {
         ClinicContext context;
-        public CountryServicies()
+        public CountryServicies(ClinicContext _context)
         {
-            context = new ClinicContext();
+            context = _context;
         }
         public List<CountryDTO> LoadAll()
         {
@@ -30,6 +30,23 @@ namespace ClinicDemo1112.servicies
 
             return countries;
 
+        }
+
+        public CountryDTO Load(int Id)
+        {
+            Country country = context.Countries.Find(Id);
+
+            //CountryDTO countryDTO = new CountryDTO();
+            //countryDTO.Id = country.Id;
+            //countryDTO.Name = country.Name;
+
+            CountryDTO countryDTO = new CountryDTO()
+            {
+                Id = country.Id,
+                Name = country.Name
+            };
+
+            return countryDTO;
         }
     }
 }
